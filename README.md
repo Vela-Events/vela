@@ -244,9 +244,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for commit conventions, branch naming, an
 
 ## Community
 
-- [GitHub Discussions](https://github.com/vela-event/vela/discussions) — Questions, ideas, show & tell
-- [Discord](https://discord.gg/vela) — Chat with the community
-- [Twitter](https://twitter.com/vela_events) — Updates and announcements
+- [GitHub Discussions](https://github.com/vela-Events/vela/discussions) — Questions, ideas, show & tell
+<!-- - [Discord](https://discord.gg/vela) — Chat with the community
+- [Twitter](https://twitter.com/vela_events) — Updates and announcements -->
 
 ## Security
 
@@ -262,6 +262,6 @@ Vela is open source under the [AGPL-3.0 License](LICENSE).
 
 **If Vela is useful to you, consider giving it a star.**
 
-[![Star on GitHub](https://img.shields.io/github/stars/vela-event/vela?style=social)](https://github.com/vela-event/vela)
+[![Star on GitHub](https://img.shields.io/github/stars/vela-event/vela?style=social)](https://github.com/Vela-Events/vela)
 
 </div>
