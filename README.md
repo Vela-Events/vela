@@ -11,7 +11,7 @@
 Ingest structured events. Evaluate rules in real time. Deliver alerts to Slack, Discord, Email, and webhooks.
 
 [![License](https://img.shields.io/badge/license-AGPL--3.0-blue)](LICENSE)
-[![CI](https://img.shields.io/github/actions/workflow/status/vela-event/vela/ci.yml?branch=main&label=CI)](https://github.com/vela-event/vela/actions)
+[![CI](https://img.shields.io/github/actions/workflow/status/vela-event/vela/ci.yml?branch=main&label=CI)](https://github.com/vela-Events/vela/actions)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](#)
 [![NestJS](https://img.shields.io/badge/NestJS-10.x-E0234E?logo=nestjs&logoColor=white)](#)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](#contributing)
@@ -71,7 +71,7 @@ Your App → Vela SDK → Event Ingestion → Schema Validation
 ### 1. Clone and configure
 
 ```bash
-git clone https://github.com/vela-event/vela.git
+git clone https://github.com/vela-Events/vela.git
 cd vela
 cp .env.sample .env
 ```
@@ -226,7 +226,7 @@ Deploy anywhere: a VPS, Railway, Render, Fly.io, or your own Kubernetes cluster.
 - [ ] Dashboard UI improvements
 - [ ] More notification channels (Teams, PagerDuty, Telegram)
 <!-- 
-See the [project board](https://github.com/vela-event/vela/projects) for what's in progress. -->
+See the [project board](https://github.com/vela-Events/vela/projects) for what's in progress. -->
 
 ## Contributing
 

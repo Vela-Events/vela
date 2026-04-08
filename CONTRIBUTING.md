@@ -13,7 +13,7 @@ Thank you for your interest in contributing to Vela! This guide will help you ge
 1. **Clone the repo**
 
 ```bash
-git clone https://github.com/vela-event/vela.git
+git clone https://github.com/vela-Events/vela.git
 cd vela
 ```
 
@@ -118,14 +118,14 @@ refactor(messaging): extract topic constants
 
 ## Reporting Bugs
 
-Open a [GitHub Issue](https://github.com/vela-event/vela/issues/new?template=bug_report.md) with:
+Open a [GitHub Issue](https://github.com/vela-Events/vela/issues/new?template=bug_report.md) with:
 - Steps to reproduce
 - Expected vs actual behavior
 - Environment details (OS, Node version)
 
 ## Requesting Features
 
-Open a [GitHub Issue](https://github.com/vela-event/vela/issues/new?template=feature_request.md) describing:
+Open a [GitHub Issue](https://github.com/vela-Events/vela/issues/new?template=feature_request.md) describing:
 - The problem you're trying to solve
 - Your proposed solution
 - Any alternatives you've considered

@@ -6,7 +6,7 @@ If you discover a security vulnerability in Vela, please report it responsibly.
 
 **Do not open a public GitHub issue for security vulnerabilities.**
 
-Instead, please use [GitHub Security Advisories](https://github.com/vela-event/vela/security/advisories/new) to report vulnerabilities privately.
+Instead, please use [GitHub Security Advisories](https://github.com/vela-Events/vela/security/advisories/new) to report vulnerabilities privately.
 
 ### What to include
 
