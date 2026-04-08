@@ -1,0 +1,54 @@
+{
+  "name": "@vela-event/sdk",
+  "version": "0.1.1",
+  "description": "TypeScript/JavaScript SDK for the Vela event intelligence platform",
+  "author": "fktona",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vela-event/vela",
+    "directory": "packages/sdk"
+  },
+  "homepage": "https://velahq.xyz/docs/sdks/typescript/overview",
+  "bugs": {
+    "url": "https://github.com/vela-event/vela/issues"
+  },
+  "keywords": [
+    "vela",
+    "event",
+    "sdk",
+    "typescript",
+    "event-ingestion",
+    "event-driven",
+    "observability",
+    "notifications"
+  ],
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src --ext .ts"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.0",
+    "rimraf": "^6.0.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "event": "order.placed",
+  "data": {
+    "orderId": "ord_01hzyd8qj3v2x9k0",
+    "amountCents": 4999,
+    "currency": "USD",
+    "itemCount": 3,
+    "attributes": {
+      "campaign": "spring-sale",
+      "couponApplied": false
+    }
+  },
+  "metadata": {
+    "environment": "staging",
+    "traceId": "trace-9f3c2a1b"
+  },
+  "customer_id": "cust_8821",
+  "level": "info"
+}

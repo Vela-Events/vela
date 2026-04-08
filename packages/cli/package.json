@@ -1,0 +1,54 @@
+{
+  "name": "@vela-event/cli",
+  "version": "0.1.5",
+  "description": "CLI for the Vela event intelligence platform — manage event schemas as code",
+  "author": "fktona",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vela-event/vela",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://velahq.xyz/docs/cli/overview",
+  "bugs": {
+    "url": "https://github.com/vela-event/vela/issues"
+  },
+  "keywords": [
+    "vela",
+    "event",
+    "schema",
+    "cli",
+    "schema-as-code",
+    "event-driven",
+    "observability"
+  ],
+  "bin": {
+    "vela": "./bin/vela.js"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@vela-event/sdk": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.10.7",
+    "jest": "^30.0.0",
+    "rimraf": "^6.0.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

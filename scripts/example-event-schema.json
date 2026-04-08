@@ -1,0 +1,61 @@
+{
+  "eventName": "order.placed",
+  "description": "Emitted when checkout completes successfully",
+  "fields": [
+    {
+      "id": "fld-order-id",
+      "name": "orderId",
+      "type": "string",
+      "required": true,
+      "description": "Opaque order identifier from your system",
+      "validation": {
+        "min": 1,
+        "max": 128
+      }
+    },
+    {
+      "id": "fld-amount-cents",
+      "name": "amountCents",
+      "type": "number",
+      "required": true,
+      "description": "Charge total in smallest currency unit"
+    },
+    {
+      "id": "fld-currency",
+      "name": "currency",
+      "type": "enum",
+      "required": true,
+      "enumValues": ["USD", "EUR", "GBP"],
+      "description": "ISO-style currency bucket for reporting"
+    },
+    {
+      "id": "fld-items",
+      "name": "itemCount",
+      "type": "number",
+      "required": false,
+      "defaultValue": 1,
+      "description": "Line items in the order"
+    },
+    {
+      "id": "fld-payload-extra",
+      "name": "attributes",
+      "type": "object",
+      "required": false,
+      "description": "Arbitrary structured attributes (flat validation)"
+    }
+  ],
+  "metadataFields": [
+    {
+      "id": "meta-env",
+      "name": "environment",
+      "type": "string",
+      "description": "e.g. production, staging"
+    },
+    {
+      "id": "meta-trace",
+      "name": "traceId",
+      "type": "string",
+      "description": "Request / distributed trace id"
+    }
+  ]
+}

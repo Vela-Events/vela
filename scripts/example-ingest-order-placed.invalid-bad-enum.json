@@ -1,0 +1,10 @@
+{
+  "event": "order.placed",
+  "data": {
+    "orderId": "ord_bad_enum",
+    "amountCents": 100,
+    "currency": "JPY"
+  },
+  "metadata": {},
+  "level": "info"
+}

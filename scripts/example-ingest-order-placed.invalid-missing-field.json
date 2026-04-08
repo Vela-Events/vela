@@ -1,0 +1,9 @@
+{
+  "event": "order.placed",
+  "data": {
+    "amountCents": 1999,
+    "currency": "USD"
+  },
+  "metadata": {},
+  "level": "info"
+}

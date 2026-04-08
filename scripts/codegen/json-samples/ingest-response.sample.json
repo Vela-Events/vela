@@ -1,0 +1,22 @@
+{
+  "accepted": 1,
+  "events": [
+    {
+      "id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "appId": "f10d19f2-58fd-4999-b880-10f4bc516c5b",
+      "event": "order.placed",
+      "customer_id": "cust_8821",
+      "data": {
+        "orderId": "ord_01hzyd8qj3v2x9k0",
+        "amountCents": 4999,
+        "currency": "USD"
+      },
+      "level": "info",
+      "metadata": {
+        "environment": "staging"
+      },
+      "timestamp": "2026-03-28T12:00:00.000Z",
+      "ingestedAt": "2026-03-28T12:00:00.001Z"
+    }
+  ]
+}

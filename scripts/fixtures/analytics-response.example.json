@@ -1,0 +1,25 @@
+{
+  "eventTrends": [
+    { "date": "2026-03-28T10:00:00.000Z", "value": 4 },
+    { "date": "2026-03-28T11:00:00.000Z", "value": 7 },
+    { "date": "2026-03-28T12:00:00.000Z", "value": 2 }
+  ],
+  "errorRate": [
+    { "date": "2026-03-28T10:00:00.000Z", "value": 0 },
+    { "date": "2026-03-28T11:00:00.000Z", "value": 14.29 },
+    { "date": "2026-03-28T12:00:00.000Z", "value": 50 }
+  ],
+  "eventDistribution": [
+    { "event": "order.placed", "count": 120, "percentage": 62.5 },
+    { "event": "checkout.failed", "count": 40, "percentage": 20.83 },
+    { "event": "user.signup", "count": 32, "percentage": 16.67 }
+  ],
+  "errorBreakdown": [
+    { "event": "checkout.failed", "count": 8, "change": -2 },
+    { "event": "payment.charge", "count": 3, "change": 1 }
+  ],
+  "totalEvents": 192,
+  "eventsToday": 45,
+  "errorCount": 11,
+  "activeSources": 5
+}
