@@ -129,7 +129,7 @@ await vela.ingest({
 });
 ```
 
-### Python
+<!-- ### Python
 
 ```bash
 pip install vela-sdk
@@ -146,6 +146,7 @@ vela.ingest(
     level="info",
 )
 ```
+-->
 
 ### CLI
 
@@ -162,8 +163,8 @@ vela pull     # Pull remote schemas to local files
 | Package | npm | Source | Docs |
 |---------|-----|--------|------|
 | `@vela-event/sdk` | [![npm](https://img.shields.io/npm/v/@vela-event/sdk?logo=npm)](https://www.npmjs.com/package/@vela-event/sdk) | [packages/sdk](packages/sdk) | [docs.velahq.xyz/sdks/typescript](https://docs.velahq.xyz/sdks/typescript/overview) |
-| `vela-sdk` (Python) | [![PyPI](https://img.shields.io/pypi/v/vela-sdk?logo=pypi&logoColor=white)](https://pypi.org/project/vela-sdk/) | [packages/sdk-python](packages/sdk-python) | [docs.velahq.xyz/sdks/python](https://docs.velahq.xyz/sdks/python/overview) |
 | `@vela-event/cli` | [![npm](https://img.shields.io/npm/v/@vela-event/cli?logo=npm)](https://www.npmjs.com/package/@vela-event/cli) | [packages/cli](packages/cli) | [docs.velahq.xyz/cli](https://docs.velahq.xyz/cli/overview) |
+<!-- | `vela-sdk` (Python) | [![PyPI](https://img.shields.io/pypi/v/vela-sdk?logo=pypi&logoColor=white)](https://pypi.org/project/vela-sdk/) | [packages/sdk-python](packages/sdk-python) | [docs.velahq.xyz/sdks/python](https://docs.velahq.xyz/sdks/python/overview) | -->
 
 ## Schema-as-Code
 
