@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" fill="none">
+  <rect width="1000" height="720" rx="12" fill="#fafaf9"/>
+
+  <!-- ═══════════════ TITLE ═══════════════ -->
+  <text x="500" y="36" text-anchor="middle" fill="#18181b" font-family="system-ui" font-size="18" font-weight="700">Vela — Architecture</text>
+
+  <!-- ═══════════════ CLIENTS (top) ═══════════════ -->
+  <rect x="60" y="60" width="145" height="56" rx="8" fill="#18181b"/>
+  <text x="132" y="85" text-anchor="middle" fill="#a78bfa" font-family="system-ui" font-size="12" font-weight="600">Dashboard</text>
+  <text x="132" y="102" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="10">Browser · JWT</text>
+
+  <rect x="230" y="60" width="145" height="56" rx="8" fill="#18181b"/>
+  <text x="302" y="85" text-anchor="middle" fill="#a78bfa" font-family="system-ui" font-size="12" font-weight="600">SDK Client</text>
+  <text x="302" y="102" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="10">Server · client_secret</text>
+
+  <rect x="400" y="60" width="145" height="56" rx="8" fill="#18181b"/>
+  <text x="472" y="85" text-anchor="middle" fill="#a78bfa" font-family="system-ui" font-size="12" font-weight="600">Event Producer</text>
+  <text x="472" y="102" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="10">x-api-key</text>
+
+  <rect x="570" y="60" width="145" height="56" rx="8" fill="#18181b"/>
+  <text x="642" y="85" text-anchor="middle" fill="#a78bfa" font-family="system-ui" font-size="12" font-weight="600">Realtime Sub</text>
+  <text x="642" y="102" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="10">WebSocket · JWT</text>
+
+  <!-- Arrows: Clients → NestJS -->
+  <line x1="132" y1="116" x2="132" y2="165" stroke="#a78bfa" stroke-width="2"/>
+  <polygon points="126,163 132,175 138,163" fill="#a78bfa"/>
+
+  <line x1="302" y1="116" x2="302" y2="165" stroke="#a78bfa" stroke-width="2"/>
+  <polygon points="296,163 302,175 308,163" fill="#a78bfa"/>
+
+  <line x1="472" y1="116" x2="472" y2="165" stroke="#a78bfa" stroke-width="2"/>
+  <polygon points="466,163 472,175 478,163" fill="#a78bfa"/>
+
+  <line x1="642" y1="116" x2="642" y2="165" stroke="#a78bfa" stroke-width="2"/>
+  <polygon points="636,163 642,175 648,163" fill="#a78bfa"/>
+
+  <!-- ═══════════════ NESTJS APP BOX ═══════════════ -->
+  <rect x="40" y="175" width="720" height="220" rx="10" fill="#f5f3ff" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="60" y="197" fill="#7c3aed" font-family="system-ui" font-size="11" font-weight="600">NestJS Application</text>
+
+  <!-- REST API -->
+  <rect x="60" y="210" width="260" height="55" rx="8" fill="#a78bfa"/>
+  <text x="190" y="234" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="14" font-weight="700">REST API  /v1/*</text>
+  <text x="190" y="253" text-anchor="middle" fill="#ede9fe" font-family="system-ui" font-size="10">Auth · Accounts · Apps · Schemas · Events · Analytics</text>
+
+  <!-- EventsModule (ingest) -->
+  <rect x="340" y="210" width="180" height="55" rx="8" fill="#7c3aed"/>
+  <text x="430" y="234" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="14" font-weight="700">Event Ingestion</text>
+  <text x="430" y="253" text-anchor="middle" fill="#ede9fe" font-family="system-ui" font-size="10">POST /v1/ingest → validate → save</text>
+
+  <!-- Realtime -->
+  <rect x="540" y="210" width="200" height="55" rx="8" fill="#a78bfa"/>
+  <text x="640" y="234" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="14" font-weight="700">Realtime Gateway</text>
+  <text x="640" y="253" text-anchor="middle" fill="#ede9fe" font-family="system-ui" font-size="10">Socket.IO · room app:{appId}</text>
+
+  <!-- Message Bus -->
+  <rect x="170" y="300" width="380" height="48" rx="8" fill="#18181b"/>
+  <text x="360" y="322" text-anchor="middle" fill="#a78bfa" font-family="system-ui" font-size="13" font-weight="600">Message Bus</text>
+  <text x="360" y="338" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="10">RabbitMQ  ·  in-memory fallback  ·  pub/sub</text>
+
+  <!-- Arrow: Ingest → Message Bus -->
+  <line x1="430" y1="265" x2="430" y2="296" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="424,294 430,306 436,294" fill="#7c3aed"/>
+  <text x="455" y="286" fill="#71717a" font-family="system-ui" font-size="9">publish</text>
+
+  <!-- Arrow: Message Bus → Realtime (fanout) -->
+  <line x1="550" y1="320" x2="620" y2="320" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4,3"/>
+  <line x1="640" y1="265" x2="640" y2="310" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="634,308 640,320 646,308" fill="#a78bfa"/>
+  <text x="595" y="312" fill="#71717a" font-family="system-ui" font-size="9">fanout</text>
+
+  <!-- Notifications Evaluator + Delivery -->
+  <rect x="60" y="360" width="300" height="25" rx="5" fill="#27272a"/>
+  <text x="210" y="377" text-anchor="middle" fill="#d4d4d8" font-family="system-ui" font-size="10">notifications-evaluator  →  evaluate rules  →  match</text>
+
+  <!-- Arrow: Message Bus → Evaluator -->
+  <line x1="280" y1="348" x2="210" y2="356" stroke="#a78bfa" stroke-width="1.5"/>
+  <polygon points="206,350 210,362 216,350" fill="#a78bfa"/>
+
+  <!-- Arrow: Evaluator → back to bus (publish notifications.deliver) -->
+  <line x1="360" y1="373" x2="450" y2="348" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="420" y="368" fill="#71717a" font-family="system-ui" font-size="8">notifications.deliver</text>
+
+  <!-- ═══════════════ OAuth Providers (right) ═══════════════ -->
+  <rect x="800" y="195" width="170" height="110" rx="8" fill="#18181b"/>
+  <text x="885" y="218" text-anchor="middle" fill="#a78bfa" font-family="system-ui" font-size="12" font-weight="600">OAuth Providers</text>
+  <rect x="815" y="230" width="140" height="28" rx="4" fill="#27272a"/>
+  <text x="885" y="249" text-anchor="middle" fill="#d4d4d8" font-family="system-ui" font-size="11">Google OAuth 2.0</text>
+  <rect x="815" y="265" width="140" height="28" rx="4" fill="#27272a"/>
+  <text x="885" y="284" text-anchor="middle" fill="#d4d4d8" font-family="system-ui" font-size="11">GitHub OAuth 2.0</text>
+
+  <!-- Arrow: REST API → OAuth -->
+  <line x1="320" y1="237" x2="320" y2="237" stroke="none"/>
+  <line x1="760" y1="237" x2="795" y2="237" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="793,231 805,237 793,243" fill="#a78bfa"/>
+  <text x="778" y="230" fill="#71717a" font-family="system-ui" font-size="9">OAuth</text>
+
+  <!-- ═══════════════ INFRASTRUCTURE (bottom-left) ═══════════════ -->
+  <rect x="40" y="430" width="440" height="120" rx="10" fill="#f5f3ff" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="60" y="452" fill="#7c3aed" font-family="system-ui" font-size="11" font-weight="600">Infrastructure  (Docker)</text>
+
+  <!-- PostgreSQL -->
+  <rect x="60" y="465" width="190" height="70" rx="8" fill="#336791"/>
+  <text x="155" y="496" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="14" font-weight="700">PostgreSQL 15</text>
+
+  <!-- RabbitMQ -->
+  <rect x="270" y="465" width="190" height="70" rx="8" fill="#ff6600"/>
+  <text x="365" y="496" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="14" font-weight="700">RabbitMQ 3.13</text>
+
+  <!-- Arrow: NestJS App → PostgreSQL -->
+  <line x1="155" y1="395" x2="155" y2="460" stroke="#336791" stroke-width="2" stroke-dasharray="5,3"/>
+  <polygon points="149,458 155,470 161,458" fill="#336791"/>
+  <text x="170" y="430" fill="#71717a" font-family="system-ui" font-size="9">TypeORM</text>
+
+  <!-- Arrow: Message Bus → RabbitMQ -->
+  <line x1="365" y1="395" x2="365" y2="460" stroke="#ff6600" stroke-width="2"/>
+  <polygon points="359,458 365,470 371,458" fill="#ff6600"/>
+  <text x="385" y="430" fill="#71717a" font-family="system-ui" font-size="9">AMQP</text>
+
+  <!-- ═══════════════ RABBITMQ TOPOLOGY (bottom-right) ═══════════════ -->
+  <rect x="510" y="430" width="460" height="120" rx="10" fill="#fff7ed" stroke="#ff6600" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="530" y="452" fill="#c2410c" font-family="system-ui" font-size="11" font-weight="600">RabbitMQ Exchanges</text>
+
+  <rect x="530" y="465" width="130" height="50" rx="6" fill="#ff6600"/>
+  <text x="595" y="488" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="11" font-weight="600">vela.events</text>
+  <text x="595" y="504" text-anchor="middle" fill="#ffe0c2" font-family="system-ui" font-size="9">topic · durable</text>
+
+  <rect x="690" y="465" width="120" height="50" rx="6" fill="#f97316"/>
+  <text x="750" y="488" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="11" font-weight="600">vela.retry</text>
+  <text x="750" y="504" text-anchor="middle" fill="#ffe0c2" font-family="system-ui" font-size="9">TTL → re-queue</text>
+
+  <rect x="840" y="465" width="110" height="50" rx="6" fill="#dc2626"/>
+  <text x="895" y="488" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="11" font-weight="600">vela.dlq</text>
+  <text x="895" y="504" text-anchor="middle" fill="#fecaca" font-family="system-ui" font-size="9">dead-letter</text>
+
+  <!-- Arrows: exchanges -->
+  <line x1="660" y1="490" x2="685" y2="490" stroke="#f97316" stroke-width="1.5"/>
+  <polygon points="683,484 695,490 683,496" fill="#f97316"/>
+
+  <line x1="750" y1="465" x2="625" y2="465" stroke="#f97316" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="688" y="460" fill="#71717a" font-family="system-ui" font-size="8">TTL expired</text>
+
+  <line x1="810" y1="490" x2="835" y2="490" stroke="#dc2626" stroke-width="1.5"/>
+  <polygon points="833,484 845,490 833,496" fill="#dc2626"/>
+  <text x="826" y="482" fill="#71717a" font-family="system-ui" font-size="8">max 3x</text>
+
+  <!-- ═══════════════ NOTIFICATION TARGETS (bottom) ═══════════════ -->
+  <rect x="40" y="580" width="930" height="110" rx="10" fill="#f5f3ff" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="60" y="602" fill="#7c3aed" font-family="system-ui" font-size="11" font-weight="600">Notification Delivery Targets</text>
+
+  <!-- Slack -->
+  <rect x="80" y="615" width="180" height="55" rx="8" fill="#4A154B"/>
+  <text x="170" y="641" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="14" font-weight="700">Slack</text>
+  <text x="170" y="658" text-anchor="middle" fill="#d4a8d5" font-family="system-ui" font-size="10">Webhook · formatted message</text>
+
+  <!-- Discord -->
+  <rect x="290" y="615" width="180" height="55" rx="8" fill="#5865F2"/>
+  <text x="380" y="641" text-anchor="middle" fill="#fff" font-family="system-ui" font-size="14" font-weight="700">Discord</text>
+  <text x="380" y="658" text-anchor="middle" fill="#c4c9f9" font-family="system-ui" font-size="10">Webhook · formatted message</text>
+
+  <!-- Email / Resend -->
+  <rect x="500" y="615" width="180" height="55" rx="8" fill="#18181b"/>
+  <text x="590" y="641" text-anchor="middle" fill="#a78bfa" font-family="system-ui" font-size="14" font-weight="700">Email (Resend)</text>
+  <text x="590" y="658" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="10">RESEND_API_KEY</text>
+
+  <!-- Webhook -->
+  <rect x="710" y="615" width="180" height="55" rx="8" fill="#18181b"/>
+  <text x="800" y="641" text-anchor="middle" fill="#a78bfa" font-family="system-ui" font-size="14" font-weight="700">Webhooks</text>
+  <text x="800" y="658" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="10">Integration destinations</text>
+
+  <!-- Arrow: NestJS → Delivery Targets -->
+  <line x1="210" y1="395" x2="210" y2="560" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="210" y1="560" x2="170" y2="560" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="170" y1="560" x2="170" y2="610" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="164,608 170,620 176,608" fill="#7c3aed"/>
+
+  <line x1="210" y1="560" x2="380" y2="560" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="380" y1="560" x2="380" y2="610" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="374,608 380,620 386,608" fill="#7c3aed"/>
+
+  <line x1="380" y1="560" x2="590" y2="560" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="590" y1="560" x2="590" y2="610" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="584,608 590,620 596,608" fill="#7c3aed"/>
+
+  <line x1="590" y1="560" x2="800" y2="560" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="800" y1="560" x2="800" y2="610" stroke="#7c3aed" stroke-width="2"/>
+  <polygon points="794,608 800,620 806,608" fill="#7c3aed"/>
+
+  <text x="500" y="555" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="9">notifications-delivery consumer → format → send → log attempt</text>
+
+  <!-- ═══════════════ FLOW LABELS ═══════════════ -->
+  <!-- Topics in message bus area -->
+  <rect x="175" y="278" width="100" height="16" rx="3" fill="#27272a"/>
+  <text x="225" y="290" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="8">events.ingested</text>
+
+  <rect x="400" y="278" width="120" height="16" rx="3" fill="#27272a"/>
+  <text x="460" y="290" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="8">notifications.deliver</text>
+
+  <!-- ═══════════════ DB ENTITIES ANNOTATION ═══════════════ -->
+  <rect x="60" y="540" width="190" height="16" rx="3" fill="#27272a"/>
+  <text x="155" y="552" text-anchor="middle" fill="#71717a" font-family="system-ui" font-size="8">accounts · apps · events · schemas · secrets</text>
+</svg>

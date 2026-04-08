@@ -1,9 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/logo-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="docs/assets/logo-light.svg" />
-  <img alt="Vela" src="docs/assets/logo-dark.svg" height="60" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/logo-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/logo-light.svg" />
+  <img alt="Vela" src="assets/logo-dark.svg" height="60" />
 </picture>
 
 ### Open-source event ingestion and notification platform
@@ -63,7 +63,7 @@ Your App → Vela SDK → Event Ingestion → Schema Validation
 ## Architecture
 
 <p align="center">
-  <img src="docs/vela_infra.svg" alt="Vela Architecture" width="900" />
+  <img src="assets/vela_infra.svg" alt="Vela Architecture" width="900" />
 </p>
 
 ## Getting Started
